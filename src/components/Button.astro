@@ -1,0 +1,21 @@
+---
+// Props for button text only
+const { variant, size } = Astro.props;
+---
+
+<button class={variant + " " + size}><slot /></button>
+
+<style>
+    .primary {
+        border-radius: 50%;
+        border-style: solid;
+        background-color: #fff;
+        color: tomato;
+    }
+    .secondary {
+        background: red;
+    }
+    .medium{
+        size: 300px;
+    }
+</style>
