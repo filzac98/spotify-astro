@@ -1,26 +1,22 @@
 ---
-import Button from "../components/Button.astro"
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css"
-import CardSection from "../components/CardSection.astro"
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Spotify</h1>
-		<Button variant="primary" size="medium">Log in</Button>
-		<CardSection
-  cards={[
-    { title: "Playlist 1", imageSrc: "https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" },
-    { title: "Playlist 2", imageSrc: "https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" },
-    { title: "Playlist 3", imageSrc: "https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" },
-  ]}
-/>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Spotify Clone</title>
+  </head>
+  <body>
+    <Header />
+    <Sidebar />
+    <main>
+      <Hero />
+    </main>
+    <Footer />
+  </body>
 </html>
