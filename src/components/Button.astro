@@ -3,14 +3,16 @@
 const { variant, size } = Astro.props;
 ---
 
-<button class={variant + " " + size}><slot /></button>
+<a href="/animation" class={variant + " " + size}><slot /></a>
 
 <style>
     .primary {
-        border-radius: 50%;
-        border-style: solid;
-        background-color: #fff;
-        color: tomato;
+        border-radius: 4px;
+        border: none;
+        background-color: #0070f3;
+        color: white;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
     }
     .secondary {
         background: red;

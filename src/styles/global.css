@@ -1,0 +1,28 @@
+:root {
+  --spotify-green: #1db954;
+  --spotify-black: #191414;
+  --spotify-white: #fff;
+  --spotify-gray: #b3b3b3;
+  --font-main: "Helvetica", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--spotify-white);
+  background-color: var(--spotify-black);
+}
+
+a {
+  text-decoration: none;
+  color: var(--spotify-white);
+}
+
+button {
+  background-color: var(--spotify-green);
+  color: var(--spotify-black);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}

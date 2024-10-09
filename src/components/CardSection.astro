@@ -1,0 +1,11 @@
+---
+// Props for cards data
+const { cards } = Astro.props;
+import Card from './Card.astro';
+---
+
+<section class="cards-section">
+  {cards.map((card) => (
+    <Card title={card.title} imageSrc={card.imageSrc} />
+  ))}
+</section>

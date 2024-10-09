@@ -1,0 +1,9 @@
+---
+// Props for playlist title and image
+const { title, imageSrc } = Astro.props;
+---
+
+<article>
+  <img src={imageSrc} alt={title} />
+  <h3>{title}</h3>
+</article>

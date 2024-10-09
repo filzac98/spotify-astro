@@ -1,5 +1,7 @@
 ---
 import Button from "../components/Button.astro"
+import "../styles/global.css"
+import CardSection from "../components/CardSection.astro"
 ---
 
 <html lang="en">
@@ -11,8 +13,14 @@ import Button from "../components/Button.astro"
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		
+		<h1>Spotify</h1>
 		<Button variant="primary" size="medium">Log in</Button>
+		<CardSection
+  cards={[
+    { title: "Playlist 1", imageSrc: "https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" },
+    { title: "Playlist 2", imageSrc: "https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" },
+    { title: "Playlist 3", imageSrc: "https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" },
+  ]}
+/>
 	</body>
 </html>
