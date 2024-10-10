@@ -1,13 +1,47 @@
 ---
-import CardSection from "./CardSection.astro"
+import CardSection from "./CardSection.astro";
+import ArtistCard from "./ArtistCard.astro";
+import Button from "./Button.astro";
+import AlbumCard from "./AlbumCard.astro";
 ---
+
 <section class="hero">
+    <div class="section-header">
+        <h2>Popular Artists</h2>
+        <Button buttonText="Show all" />
+      </div>
+  <div class="artist-grid">
+    <ArtistCard name="Jay-Z" imageSrc="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill" />
+    <ArtistCard name="Alan Jackson" imageSrc="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" />
+    <ArtistCard name="Michael Jackson" imageSrc="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" />
+    <ArtistCard name="Lil Wayne" imageSrc="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" />
+    <ArtistCard name="Dierks Bentley" imageSrc="https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill" />
+    <ArtistCard name="Jonas Brothers" imageSrc="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" />
+  </div>
+
+  <div class="section-header">
+    <h2>Popular Albums</h2>
+    <Button buttonText="Show all" />
+  </div>
+  <div class="album-grid">
+    <AlbumCard albumName="A Year Without Rain" artistName="Selena Gomez" imageSrc="https://via.assets.so/album.png?id=11&q=95&w=360&h=360&fit=fill" />
+    <AlbumCard albumName="MTV UNPLUGGED" artistName="Katy Perry"imageSrc="https://via.assets.so/album.png?id=12&q=95&w=360&h=360&fit=fill" />
+    <AlbumCard albumName="Under The Mistletoe"  artistName="Justin Bieber" imageSrc="https://via.assets.so/album.png?id=20&q=95&w=360&h=360&fit=fill" />
+    <AlbumCard albumName="Can't Be Tamed" artistName="Miley Cyrus" imageSrc="https://via.assets.so/album.png?id=22&q=95&w=360&h=360&fit=fill" />
+    <AlbumCard albumName="Get Rich or Die Tryin'" artistName="50 Cent" imageSrc="https://via.assets.so/album.png?id=27&q=95&w=360&h=360&fit=fill" />
+    <AlbumCard albumName="Believe" artistName="Justin Bieber" imageSrc="https://via.assets.so/album.png?id=64&q=95&w=360&h=360&fit=fill" />
+  </div>
+
+
+  <div class="section-header">
     <h2>Featured Playlists</h2>
-    <CardSection
-      cards={[
-        { title: "Discover Weekly", imageSrc: "https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" },
-        { title: "Top Hits", imageSrc: "https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" },
-        { title: "New Releases", imageSrc: "https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" }
-      ]}
-    />
-  </section>
+    <Button buttonText="Show all" />
+  </div>
+  <CardSection
+    cards={[
+      { title: "Discover Weekly", imageSrc: "https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" },
+      { title: "Top Hits", imageSrc: "https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" },
+      { title: "New Releases", imageSrc: "https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" }
+    ]}
+  />
+</section>

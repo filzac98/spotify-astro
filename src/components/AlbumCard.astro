@@ -1,0 +1,9 @@
+---
+const { albumName, imageSrc , artistName } = Astro.props;
+---
+
+<div class="album-card">
+  <img src={imageSrc} alt={albumName} />
+  <h3>{albumName}</h3>
+  <p>{artistName}</p>
+</div>

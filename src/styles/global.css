@@ -11,6 +11,7 @@ body {
   font-family: var(--font-main);
   color: var(--spotify-white);
   background-color: var(--spotify-black);
+  margin-top: 80px; /* Add margin equal to the header height so content doesn't overlap */
 }
 
 a {
@@ -31,7 +32,14 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--spotify-black); /* Keep background color */
+  z-index: 1000;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 .header-nav ul {
@@ -55,6 +63,12 @@ button {
   height: 100vh;
   position: fixed;
   padding: 20px;
+  background: linear-gradient(
+    to bottom,
+    #282828,
+    #141414
+  ); /* Gradient from light to dark */
+  border-radius: 10px; /* Optional: round the edges of the section */
 }
 
 .sidebar ul {
@@ -73,7 +87,14 @@ button {
 
 .hero {
   padding: 40px;
-  margin-left: 250px; /* Adjust to align with sidebar */
+  margin-left: 300px; /* Adjust to align with sidebar */
+  margin-right: 10px;
+  background: linear-gradient(
+    to bottom,
+    #282828,
+    #141414
+  ); /* Gradient from light to dark */
+  border-radius: 10px; /* Optional: round the edges of the section */
 }
 
 .hero h2 {
@@ -97,4 +118,83 @@ button {
   border-radius: 50%;
   padding: 10px;
   margin: 0 10px;
+}
+
+.artist-card {
+  text-align: left;
+  margin: 10px;
+}
+
+.artist-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.artist-card h3 {
+  color: var(--spotify-white);
+  margin: 5px 0;
+}
+
+.artist-card p {
+  color: var(--spotify-gray);
+}
+
+.artist-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.show-all-button {
+  background-color: var(--spotify-green);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.show-all-button:hover {
+  background-color: var(--spotify-green-hover);
+}
+
+.album-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: left;
+  flex-wrap: wrap; /* This allows the grid to wrap on smaller screens */
+}
+
+.album-card {
+  text-align: left;
+  margin: 10px;
+}
+
+.album-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 8px;
+}
+
+.album-card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.album-card p {
+  font-size: 14px;
+  color: gray;
 }

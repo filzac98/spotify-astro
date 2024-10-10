@@ -1,23 +1,5 @@
 ---
-// Props for button text only
-const { variant, size } = Astro.props;
+const { buttonText } = Astro.props;
 ---
 
-<a href="/animation" class={variant + " " + size}><slot /></a>
-
-<style>
-    .primary {
-        border-radius: 4px;
-        border: none;
-        background-color: #0070f3;
-        color: white;
-        cursor: pointer;
-        padding: 0.5rem 1rem;
-    }
-    .secondary {
-        background: red;
-    }
-    .medium{
-        size: 300px;
-    }
-</style>
+<button class="show-all-button">{buttonText}</button>
